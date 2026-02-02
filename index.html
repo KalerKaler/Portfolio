@@ -1,23 +1,82 @@
 <!DOCTYPE HTML>
 <html>
     <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <title>Kaler Portfolio</title>
         <style>
+            body{
+                background: #100c08;
+                margin:0;
+                padding:0;
+            }
+            
             .banner{
                 position:relative;
+                top:0;
+                left:0;
+                width:100%;
                 z-index:-50;
             }
-
+            
             .pfp{
                 position:relative;
                 z-index:10;
                 border-radius: 50%;
                 align-items: left;
+                margin-top:-12vh;;
+                margin-left:5vw;
+                height:30vh;
+            }
+            
+            .name{
+                font-size: 4rem;
+                color: #c4aead;
+                text-align: right;
+                margin-top:-2vh;
+                margin-left:30vw;
+            }
+            
+            .flex-container{
+                display:flex;
+                margin-top:-4vh;
+                
+            }
+            
+            /* Container for the icons */
+            .icons {
+                position: absolute; 
+                top: 8vh;          /* Distance from top edge */
+                right: 3vw;        /* Distance from right edge */
+                z-index: 100;       /* Make sure they sit on top of the banner */
+                display: flex;
+                gap: 15px;          /* Modern way to add space between flex items */
+            }
+            
+            /* Individual icon styling */
+            .social {
+                color: aliceblue;
+                font-size: 1.8rem;  /* Make them a bit bigger/readable */
+                transition: transform 0.2s;
+                cursor: pointer;
+            }
+            
+            .social:hover {
+                color: #c4aead;     /* Match your name's color on hover */
+                transform: scale(1.1);
             }
         </style>
     </head>
     <body>
         <img class="top banner" src="https://i.imgur.com/hedFquz.jpeg" alt="Placeholder">
-        <img class="top pfp" src="https://i.imgur.com/H90evOD.jpeg" alt="Placeholder PFP">
-    </body>
+        <div class="flex-container icons">
+            <i class="fa-brands fa-linkedin social"></i>
+            <i class="fa-brands fa-github social"></i>
+        </div>
+        <br>
+        <div class="flex-container">
+            <img class="top pfp" src="https://i.imgur.com/H90evOD.jpeg" alt="Placeholder PFP">
+            <h1 class="top name">Rajveer Singh Kaler</h1>
+            <h3 class="top description">A  </h3>
+        </div>
+        </body>
 </html>
