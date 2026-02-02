@@ -4,79 +4,93 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <title>Kaler Portfolio</title>
         <style>
-            body{
+            body {
                 background: #100c08;
-                margin:0;
-                padding:0;
+                margin: 0;
+                padding: 0;
+                font-family: sans-serif; /* Cleaner look for portfolio */
             }
             
-            .banner{
-                position:relative;
-                top:0;
-                left:0;
-                width:100%;
-                z-index:-50;
+            .banner {
+                position: relative;
+                width: 100%;
+                z-index: -50;
             }
             
-            .pfp{
-                position:relative;
-                z-index:10;
+            .flex-container {
+                display: flex;
+                align-items: flex-start; /* Aligns items to the top of the container */
+                margin-top: -10vh;       /* Pulls the profile section up into the banner area */
+                padding-left: 5vw;
+            }
+
+            .pfp {
+                z-index: 10;
                 border-radius: 50%;
-                align-items: left;
-                margin-top:-12vh;;
+                height: 30vh;
                 margin-left:5vw;
-                height:30vh;
+                border: 3px solid #100c08; /* Adds a small gap between image and background */
+            }
+
+            /* This new container stacks the Name and Description vertically */
+            .text-content {
+                display: flex;
+                flex-direction: column;
+                margin-left: 30vw;
+                margin-top: 5vh; /* Adjust this to move text up or down relative to PFP */
             }
             
-            .name{
-                font-size: 4rem;
+            .name {
+                font-size: 3.5rem;
                 color: #c4aead;
-                text-align: right;
-                margin-top:-2vh;
-                margin-left:30vw;
+                margin: 0; /* Remove default margins to control spacing better */
+            }
+
+            .description {
+                color: beige;
+                margin-top: 1.2rem;
+                font-weight: 400;
+                max-width: 500px; /* Prevents text from stretching too wide */
+                font-size:1.4rem;
             }
             
-            .flex-container{
-                display:flex;
-                margin-top:-4vh;
-                
-            }
-            
-            /* Container for the icons */
             .icons {
                 position: absolute; 
-                top: 8vh;          /* Distance from top edge */
-                right: 3vw;        /* Distance from right edge */
-                z-index: 100;       /* Make sure they sit on top of the banner */
+                top: 5vh; 
+                right: 3vw;
+                z-index: 100;
                 display: flex;
-                gap: 15px;          /* Modern way to add space between flex items */
+                gap: 15px;
             }
             
-            /* Individual icon styling */
             .social {
                 color: aliceblue;
-                font-size: 1.8rem;  /* Make them a bit bigger/readable */
+                font-size: 1.8rem;
                 transition: transform 0.2s;
                 cursor: pointer;
             }
             
             .social:hover {
-                color: #c4aead;     /* Match your name's color on hover */
+                color: #c4aead;
                 transform: scale(1.1);
             }
         </style>
     </head>
     <body>
-        <img class="top banner" src="https://i.imgur.com/hedFquz.jpeg" alt="Placeholder">
-        <div class="flex-container icons">
+        <img class="banner" src="https://i.imgur.com/hedFquz.jpeg" alt="Banner">
+        
+        <div class="icons">
             <i class="fa-brands fa-linkedin social"></i>
             <i class="fa-brands fa-github social"></i>
         </div>
-        <br>
+
         <div class="flex-container">
-            <img class="top pfp" src="https://i.imgur.com/H90evOD.jpeg" alt="Placeholder PFP">
-            <h1 class="top name">Rajveer Singh Kaler</h1>
-            <h3 class="top description">A  </h3>
+            <img class="pfp" src="https://i.imgur.com/H90evOD.jpeg" alt="Rajveer PFP">
+            
+            <div class="text-content">
+                <h1 class="name">Rajveer Singh Kaler</h1>
+                <h3 class="description">A passionate and continuously learning student who does not back down from hard work</h3>
+            </div>
         </div>
-        </body>
+    </body>
 </html>
