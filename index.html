@@ -91,7 +91,32 @@
                 margin-left:4vw;
                 margin-right:3.7vw;
             }
-            
+            /* 1. Large screens up to 1360px (Default 3 columns) */
+            @media (max-width: 1360px) {
+                .certificates {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+
+            /* 2. Tablets (This now overrides the 1360px rule) */
+            @media (max-width: 956px) {
+                .certificates {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                .flex-container{
+                    flex-direction: column;
+                }
+                .pfp{
+                    margin-left:30%;
+                }
+            }
+
+            /* 3. Phones (This overrides everything else) */
+            @media (max-width: 600px) {
+                .certificates {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
             .cert-card {
                 background: #1a1612; /* Slightly lighter than background to stand out */
                 padding: 20px;
