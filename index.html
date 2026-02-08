@@ -11,16 +11,18 @@
                 margin: 0;
                 padding: 0;
                 font-family: 'Inter', sans-serif; /* Cleaner look for portfolio */
+                transition: all 0.5s ease;
             }
 
             body.is-active{
-                background: #C1C4D9;
+                background: #EBFFFF;
             }
             
             .banner {
                 position: relative;
                 width: 100%;
                 z-index: -50;
+                transition: all 0.5s ease;;
             }
             
             .flex-container {
@@ -175,7 +177,7 @@
 </style>
 </head>
 <body id="body">
-    <img class="banner" src="https://raw.githubusercontent.com/KalerKaler/Portfolio/main/assets/bannerDark.jpeg" alt="Banner">
+    <img class="banner" id="banner" src="https://raw.githubusercontent.com/KalerKaler/Portfolio/main/assets/bannerDark.jpeg" alt="Banner">
     <i class="fa-solid fa-moon social" id="theme"></i>
     <div class="icons">
         <a href="https://www.linkedin.com/in/rajveer-singh-64691435a/" target="_blank"><i class="fa-brands fa-linkedin social"></i></a>
@@ -236,8 +238,10 @@
         theme.onclick=function(){
             document.getElementById("body").classList.toggle("is-active");
             if (this.classList.contains("fa-moon")){
+                document.getElementById("banner").src="https://raw.githubusercontent.com/KalerKaler/Portfolio/main/assets/disaster2.jpg";
                 this.classList.replace("fa-moon","fa-sun");
             }else{
+                document.getElementById("banner").src="https://raw.githubusercontent.com/KalerKaler/Portfolio/main/assets/bannerDark.jpeg";
                 this.classList.replace("fa-sun","fa-moon");
             }
         }
